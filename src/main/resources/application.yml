@@ -1,0 +1,27 @@
+spring:
+  resources:
+    static-locations: classpath:/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .html
+    content-type: text/html
+    charset: UTF-8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shangcheng?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: ko687168
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  http:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+server:
+  port: 8083
+  error:
+    whitelabel:
+      enabled: true
